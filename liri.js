@@ -27,10 +27,10 @@ if (process.argv[2] === "my-tweets") {
 // `node liri.js spotify-this-song '<song name here>'` - Spotify:
 inquirerInput
     .prompt([{
-        type: "input",
-        message: "What is the name of the song you want to look up?",
-        name: "songName"
-    }])
+            type: "input",
+            message: "What is the name of the song you want to look up?",
+            name: "songName"
+        }])
     .then(function (inquirerResponse) {
         if (process.argv[2] === "spotify-this-song") {
             spotify.search({
@@ -68,17 +68,15 @@ inquirerInput
     })
 
 //`node liri.js do-what-it-says`- fs:
-fs.readFile("random.txt", "utf8", function(error, data) {
+fs.readFile("random.txt", "utf8", function (error, data) {
     if (error) {
-      return console.log(error);
+        return console.log(error);
     }
     var dataArr = data.split(",");
-    fs.writeFile("movies.txt", "Inception, Die Hard", function(err) {
+    fs.writeFile("movies.txt", "Inception, Die Hard", function (err) {
         if (err) {
-          return console.log(err);
+            return console.log(err);
         }
         console.log("movies.txt was updated!");
-      });
-  });
-
-    
+    });
+});
