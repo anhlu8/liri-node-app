@@ -80,16 +80,16 @@ function omdbF() {
 }
 
 
-`node liri.js do-what-it-says` - fs:
+// `node liri.js do-what-it-says` - fs:
     function fsF() {
         fs.readFile("random.txt", "utf8", function (error, data) {
             if (error) {
                 return console.log(error);
             }
             var dataArr = data.split(",");
-            console.log(dataArr);
+            
             for (var i = 0; i < dataArr.length; i++) {
-                action = dataArr[0];
+                console.log(dataArr[i]);
 
             }
         })
